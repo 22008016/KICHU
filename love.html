@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Happy Birthday Kichu ♥️</title>
+  <link rel="stylesheet" href="love.css" />
+</head>
+<body>
+
+  <div class="sidebar">
+    <h2>Menu</h2>
+    <ul>
+      <li><a href="index.html">To the One I Love Most</a></li>
+      <li><a href="us.html">Each click, a confession</a></li>
+      <li><a href="foryou.html">A Love Seen Through My Lens</a></li>
+      <li><a href="love.html" class="active">Happy Birthday LOVE ❤️</a></li>
+    </ul>
+  </div>
+
+  <div class="hamburger" onclick="toggleSidebar()">☰</div>
+
+  <div class="main-content">
+    <video 
+      src="Images/HAPPY BIRTHDAY KICHU.mp4" 
+      controls 
+      autoplay 
+      loop 
+      playsinline 
+      class="birthday-video">
+      Sorry, your browser does not support the video tag.
+    </video>
+  </div>
+
+  <script>
+    function toggleSidebar() {
+      document.querySelector('.sidebar').classList.toggle('active');
+    }
+  </script>
+
+</body>
+</html>

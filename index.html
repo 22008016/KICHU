@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>This Is How I Remember You</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Montserrat:wght@300&display=swap" rel="stylesheet">
+  <style>
+
+    #unmuteBtn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #2E2E2E;
+      color: #D3D3D3;
+      border: none;
+      padding: 10px 18px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 2px 5px rgba(212, 175, 55, 0.5);
+      display: none;
+      z-index: 1500;
+      user-select: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="sidebar" id="sidebar">
+    <h2>Menu</h2>
+    <ul>
+      <li><a href="index.html" class="active">To the One I Love Most</a></li> 
+      <li><a href="us.html">Each click, a confession</a></li>
+      <li><a href="foryou.html">A Love Seen Through My Lens</a></li>
+      <li><a href="love.html">Happy Birthday LOVE ❤️</a></li>
+    </ul>
+
+  </div>
+
+  <div class="hamburger" onclick="toggleSidebar()">
+    ☰
+  </div>
+
+  <div class="main-content">
+    <div class="banner">
+      <h1>Happy Birthday Kichu ❤</h1>
+    </div>
+
+    <div class="image-section">
+      <img src="Images/Kichu home.jpg" alt="Kichu Pic" />
+    </div>
+
+    <div class="message-section">
+      <p class="fancy-message">I don't know what to say Kichu....</p>
+      <p class="fancy-message">Just that there's one thing I know for sure that I LOVE YOU 
+                                more than anything or anyone in this world.</p>
+      <p class="fancy-message">All I want is to see you happy and healthy. I'll be there for you through every high and low, always by your side Seeing you happy makes me the happiest.</p>
+      <p class="fancy-message">Happy Birthday Kichu !!!</p>
+      <p class="fancy-message">I Love You 💕</p>
+    </div>
+  </div>
+
+  
+  <audio id="bgMusic" src="Music/When u know u know.mp3" loop muted></audio>
+
+
+  <button id="unmuteBtn">Unmute Music</button>
+
+  <script>
+    function toggleSidebar() {
+      document.getElementById('sidebar').classList.toggle('active');
+    }
+
+    const music = document.getElementById('bgMusic');
+    const unmuteBtn = document.getElementById('unmuteBtn');
+
+  
+    music.play().catch(() => {
+      // If autoplay blocked, show the button so user can play manually
+      unmuteBtn.style.display = 'inline-block';
+    });
+
+    // After 2.5 seconds, try to unmute & play with sound
+    setTimeout(() => {
+      music.muted = false;
+      music.play().then(() => {
+        unmuteBtn.textContent = 'Mute Music';
+        unmuteBtn.style.display = 'inline-block';
+      }).catch(() => {
+        // If autoplay with sound blocked, show button to let user unmute manually
+        music.muted = true; // keep muted for now
+        unmuteBtn.textContent = 'Unmute Music';
+        unmuteBtn.style.display = 'inline-block';
+      });
+    }, 2500);
+
+    // Button toggles mute/unmute and play/pause
+    unmuteBtn.addEventListener('click', () => {
+      if (music.muted) {
+        music.muted = false;
+        music.play();
+        unmuteBtn.textContent = 'Mute Music';
+      } else {
+        music.muted = true;
+        music.pause();
+        unmuteBtn.textContent = 'Unmute Music';
+      }
+    });
+  </script>
+</body>
+</html>

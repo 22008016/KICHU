@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>A Love Seen Through My Lens</title>
+  <link rel="stylesheet" href="foryou.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Montserrat:wght@300&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <div class="sidebar" id="sidebar">
+    <h2>Menu</h2>
+    <ul>
+      <li><a href="index.html">To the One I Love Most</a></li>
+      <li><a href="us.html">Each click, a confession</a></li>
+      <li><a href="foryou.html" class="active">A Love Seen Through My Lens</a></li>
+      <li><a href="love.html">Happy Birthday LOVE ❤️</a></li>
+    </ul>
+  </div>
+
+
+  <div class="hamburger" onclick="toggleSidebar()">☰</div>
+
+  <div class="main-content">
+    <div class="video-container">
+      <video id="loveVideo" autoplay loop controls>
+        <source src="Images/dance video.mp4" type="video/mp4" />
+        Sorry, your browser does not support the video tag.
+      </video>
+    </div>
+
+    <div class="letter-section">
+      <h1>My Dearest Kichu,</h1>
+      <p>
+        July 29th finally my man is 24, vayas aayi Kichu
+        I don't know if you will like it or not but yhh njan vicharichu ee thavana enthelum different ayitt cheyam enn so here it is, 
+        I really really hope you like it kichu. 
+        Soo njna ith oru june thodakkam mutha cheyn thodangiyeya 
+        at first I though ninakk book ezhuthi ath nammade pic okke ottich tharam enn but then I felt athokke ellarum cheyunne alle you deserve 
+        something special and better in all ways.
+      </p>
+      <p>
+         You light up my world in ways no words can fully capture. 
+         This letter is just a small window into my heart, 
+         a glimpse of the endless love I hold for you.
+         You are really special kichu, like palapozhum ninne nokkumbo like vallatah oru admiration thonnar ind you have a lot of good qualities
+         Responsible ahn, loving ahn, hardworking ahn, empathetic ahn, cook cheyum, and ninakk oru karyam istapettal nee pettanu ellam padich edukkum
+         Palappozhum ninne nokkumbol enikku thonarind like how did I get so lucky??? Ninakk ee oru calm aura ind like even when everything around is chaotic, you somehow feel like home
+         nee samsarikkunne kaal kooduthal njan parayune kelkkar ahn but do you know one thing Nee ninakk interest olla karyam paraayumbo nee orupad samsarikum 
+         ayne patti I really love that kichu and  I could watch you talk forever
+         your presence is my peace. You make me feel safe. Loved. Seen. And I really hope I make you feel the same.
+      </p>
+      <p>
+        Njna ingane irikumbo orkar ind like nammal thammil indarnna moments, nee chirikkunne, ennod vazhakk idan verunne, one day kai odinju enn 
+        paranj act cheythe, ratri kidakkumbo good night parayunne anitt korach kazhimbo chood edukkunnu enn paranju mari kidakkunne ravile enikkumbo
+        morning parayunne, messy hair, enne kettipidich kidakkunne, ithokke cheriya cheriya moments aahnu 
+        but for me they're everything.
+        Do you even know how much you mean to me? Ninakk thonniyittundo, 
+        how you've become such a big part of my every thought? Like seriously 
+        when something good happens, adyam ninnod parayana thonunne. When I'm down, the first face I think of is you. 
+        Even when I'm bored or sad or excited, it's like Kichu koode irunnirunnenkil…
+        Ninakku oru magic undu, you know that? A kind of softness that's so rare. 
+        Not everyone will see it because you don't go around showing it to just anyone. 
+        But I've seen it. And I swear, every time I see that soft side of you, it feels 
+        like the universe trusted me with something precious.
+        I'm not perfect. Far from it. I get moody, insecure, emotional for small things
+        ninnod kore vazhakk ittitt ind nee parayunne onnum kelkkathe irunitt ind but even then, somehow, 
+        you hold space for me. You listen. You try. And that means everything to me, Kichu.
+        Ninte life inte part aavunna ellarum lucky ahn kichu, coz you are that special,
+        I promise, whatever we go through arguments, misunderstandings, bad days I'll still 
+        choose you. Again and again. No second thoughts. No half-love. 
+        And I hope… when life gets overwhelming for you, when the world feels 
+        too loud, when everything feels heavy you'll think of me as your calm. 
+        Your safest place. Because that's all I want to be for you. Not just today. 
+        Not just when things are good. But even when everything else feels uncertain...
+      </p>
+      <p>
+        Happy Birthday Kichukuttaaa , from the girl who looks at you like you hung the 
+        moon. From the one who feels like the luckiest every time you smile. From the one 
+        who prays every night to please keep him healthy and happy, please let me love him right
+        and please, help in fulfilling all his dreams and wishes. 
+      </p>
+
+      <p>I LOVE YOU KICHU ♥️</p>
+
+      <p>Forever yours,</p>
+      <p><em>Mitra</em></p>
+    </div>
+  </div>
+
+  <script>
+    function toggleSidebar() {
+      document.getElementById('sidebar').classList.toggle('active');
+    }
+
+    // Optional: Ensure video plays with sound on user interaction
+    const loveVideo = document.getElementById('loveVideo');
+
+    // Sometimes browsers block autoplay sound, so we'll add a click to play sound if needed
+    loveVideo.muted = false;
+
+    loveVideo.play().catch(() => {
+      // If autoplay with sound blocked, mute and wait for user to interact
+      loveVideo.muted = true;
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Montserrat:wght@300&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+  font-family: 'Courgette', cursive;
+  overflow-x: hidden;
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -220px;
+  width: 200px;
+  height: 100%;
+  background-color: #2E2E2E;
+  padding: 70px 20px 20px 20px;
+  transition: left 0.3s ease;
+  z-index: 1000;
+  color: #F0F0F0;
+}
+
+.sidebar.active {
+  left: 0;
+}
+
+.sidebar h2 {
+  margin-bottom: 20px;
+  font-family: 'Courgette', cursive;
+  font-size: 30px;
+  color: #D3D3D3;
+  text-align: center;
+}
+
+.sidebar ul {
+  list-style: none;
+  text-align: center;
+}
+
+.sidebar ul li {
+  margin: 15px 0;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  color: #D3D3D3;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.sidebar ul li a:hover,
+.sidebar ul li a.active {
+  color: #D4AF37;
+}
+
+/* Hamburger Icon */
+.hamburger {
+  font-size: 28px;
+  cursor: pointer;
+  position: fixed;
+  top: 20px;
+  left: 15px;
+  z-index: 1100;
+  color: #D3D3D3;
+  background-color: #2E2E2E;
+  padding: 5px 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(212, 175, 55, 0.5);
+}
+
+/* Main Content */
+.main-content {
+  margin-left: 0;
+  transition: margin-left 0.3s ease;
+  text-align: center;
+  overflow-x: hidden;
+  padding: 40px 20px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Sidebar pushes main content */
+.sidebar.active ~ .main-content {
+  margin-left: 200px;
+}
+
+/* Birthday video styling */
+.birthday-video {
+  width: 100%;
+  max-height: 600px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(212, 175, 55, 0.7);
+  background: #000;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .sidebar {
+    width: 180px;
+  }
+
+  .sidebar.active ~ .main-content {
+    margin-left: 0;
+  }
+
+  .hamburger {
+    left: 10px;
+  }
+}
